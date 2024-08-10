@@ -1,0 +1,20 @@
+PORT=xxx
+NODE_ENV =xxx
+
+DATABASE=xxx
+
+AWS_ACCESS_KEY_ID=xxx
+AWS_SECRET_ACCESS_KEY=xxx
+AWS_REGION=xxx
+AWS_API_VERSION=xxx
+AWS_BUCKET_NAME=xxx
+
+EMAIL_FROM='"Name"<xx@mail.com>'
+EMAIL_TO=xx@mail.com
+
+CLIENT_URL = xxx
+APP_NAME = "xxx"
+
+JWT_SECRET = xxx
+
+GOOGLE_MAPS_API_KEY=xxx
