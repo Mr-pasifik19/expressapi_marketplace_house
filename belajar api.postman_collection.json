@@ -1,0 +1,548 @@
+{
+	"info": {
+		"_postman_id": "589e84e9-ff08-4f7c-80cd-10dc97585e11",
+		"name": "belajar api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10130496"
+	},
+	"item": [
+		{
+			"name": "ad",
+			"item": [
+				{
+					"name": "/upload-image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjZDNjYWZhMjhiMjhhYjA3YTQzZjgiLCJpYXQiOjE3MjMxMjQ1ODUsImV4cCI6MTcyMzcyOTM4NX0.LE4shsUpvn43Qmck_Mb4YLaG7SrFwzFbLHR8Eugj4tg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/C:/Users/PASIFIK/Pictures/desainku/spanduk.jpg",
+										"/C:/Users/PASIFIK/Pictures/desainku/promo cctv.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/upload-image?",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"upload-image"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/create-ad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": \"200 George St Sydney NSW\",\r\n  \"photos\": [\r\n    {\r\n      \"Key\": \"NZL49i2OhwRh8ZIRm_UVQ.jpeg}\",\r\n      \"Location\": \"https://tes-api-local.s3.us-east-1.amazonaws.com/NZL49i2OhwRh8ZIRm_UVQ.jpeg}\",\r\n      \"uploadedBy\": \"66acd3cafa28b28ab07a43f8\"\r\n    },\r\n    {\r\n      \"Key\": \"Ut1sIugY_1PfeaOha0_Ne.jpeg}\",\r\n      \"Location\": \"https://tes-api-local.s3.us-east-1.amazonaws.com/Ut1sIugY_1PfeaOha0_Ne.jpeg}\",\r\n      \"uploadedBy\": \"66acd3cafa28b28ab07a43f8\"\r\n    }\r\n  ],\r\n  \"description\": \"A beautiful house for sale in Sydney NSW\",\r\n  \"price\": \"850000\",\r\n  \"action\": \"Sell\",\r\n  \"propertyType\": \"House\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/create-ad",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"create-ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ad/read-single-ad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/ad/read-single-ad",
+							"path": [
+								"ad",
+								"read-single-ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ads-for-sell",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ads-for-sell/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ads-for-sell",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ads-for-rent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ads-for-rent/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ads-for-rent",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update-ad",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/update-ad/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"update-ad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete-ad",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/delete-ad/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"delete-ad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user-ads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user-ads/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user-ads",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update-ad-status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/update-ad-status/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"update-ad-status",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/contact-agent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/contact-agent",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contact-agent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/enquired-ads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/enquired-ads/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"enquired-ads",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/toggle-wishlist",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/toggle-wishlist/adID",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"toggle-wishlist",
+								"adID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/wishlist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/wishlist/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"wishlist",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/search-ads",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\":\"pacipica\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/search-ads",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"search-ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/toggle-published",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/toggle-published/:adId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"toggle-published",
+								":adId"
+							],
+							"variable": [
+								{
+									"key": "adId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mr.pasifik@gmail.com\",\r\n    \"password\":\"FaUhIw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/forgot-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mr.pasifik@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/forgot-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/current-user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjZDNjYWZhMjhiMjhhYjA3YTQzZjgiLCJpYXQiOjE3MjMwODQ3ODMsImV4cCI6MTcyMzY4OTU4M30.F-idUU0tnu05yx1zByhamQeWu6G8gHeLyB_zV9XaxV8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/current-user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"current-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update-password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/update-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update-username",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjZDNjYWZhMjhiMjhhYjA3YTQzZjgiLCJpYXQiOjE3MjMwODQ3ODMsImV4cCI6MTcyMzY4OTU4M30.F-idUU0tnu05yx1zByhamQeWu6G8gHeLyB_zV9XaxV8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"mr.pasifik\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/update-username",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"update-username"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update-profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/update-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"update-profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tes api",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFjZDNjYWZhMjhiMjhhYjA3YTQzZjgiLCJpYXQiOjE3MjMwODQ3ODMsImV4cCI6MTcyMzY4OTU4M30.F-idUU0tnu05yx1zByhamQeWu6G8gHeLyB_zV9XaxV8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
